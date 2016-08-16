@@ -151,8 +151,8 @@ def on_message(sender, text, requestInfo):
             "ru_RU",
             "EF52A",
             [
-                AirlineItinerary.passanger_info_item("Mary","2472784","549"),
-                AirlineItinerary.passanger_info_item("John","2472786","550")
+                AirlineItinerary.passenger_info_item("Mary","2472784","549"),
+                AirlineItinerary.passenger_info_item("John","2472786","550")
             ],
             [
                 AirlineItinerary.flight_info_item(

@@ -25,7 +25,7 @@ class AirlineItinerary(object):
         self.tax = tax
 
 
-    def passanger_info_item(name, passenger_id,ticket_number=""): #!!!
+    def passenger_info_item(name, passenger_id,ticket_number=""): #!!!
         return remove_empty_values({
             "name": name,
             "ticket_number": ticket_number,

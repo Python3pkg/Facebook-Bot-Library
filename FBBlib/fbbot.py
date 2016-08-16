@@ -50,7 +50,7 @@ class FBBot(object):
 
     def get_userinfo(self, user_id):
         resp = requests.get("https://graph.facebook.com/v2.6/{0}?fields=first_name,last_name,profile_pic,locate,timezone,gender&access_token={1}".format(user_id,self.access_token))
-        return resp.json
+        return resp.json()
 
     def webhook(self, request, on_message_received, on_postback_received, on_account_linked="", on_account_unlinked=""):
         '''
