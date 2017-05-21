@@ -44,7 +44,7 @@ class FBBot(object):
             @output:
                 appsecret_proof: HMAC-SHA256 hash of page access token using app_secret as the key
         '''
-        hmac_object = hmac.new(str(self.app_secret), unicode(self.access_token), hashlib.sha256)
+        hmac_object = hmac.new(str(self.app_secret), str(self.access_token), hashlib.sha256)
         generated_hash = hmac_object.hexdigest()
         return generated_hash
 
@@ -62,7 +62,7 @@ class FBBot(object):
                 htmlView
         '''
         print (request)
-        print(request.json)
+        print((request.json))
         if request.method == 'GET':
             if (request.args.get("hub.verify_token") == self.verify_token):
                     return request.args.get("hub.challenge")
@@ -305,7 +305,7 @@ class FBBot(object):
                 params=self.auth_args,
                 json=payload
             )
-            print ('Response result: '+str(response.json()))
+            print(('Response result: '+str(response.json())))
             return response.json()
         if(request_type == 'delete'):
             response = requests.delete(
@@ -313,5 +313,5 @@ class FBBot(object):
                 params=self.auth_args,
                 json=payload
             )
-            print ('Response result: '+str(response.json()))
+            print(('Response result: '+str(response.json())))
             return response.json()

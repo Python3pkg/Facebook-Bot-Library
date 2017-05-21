@@ -22,11 +22,11 @@ def webhook():
 
 def on_linked(sender, login, requestInfo):
     print("link")
-    print(sender+" "+ login)
+    print((sender+" "+ login))
 
 def on_unlinked(sender, requestInfo):
     print("unlink")
-    print(sender+" unlink")
+    print((sender+" unlink"))
 
 def on_postback(sender, text, requestInfo):
     print("post")

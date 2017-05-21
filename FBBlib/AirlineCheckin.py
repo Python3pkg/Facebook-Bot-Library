@@ -2,7 +2,7 @@
 
 def remove_empty_values(d):
     removeList = [];
-    for key, value in d.items():
+    for key, value in list(d.items()):
         if value == "":
             removeList.append(key)
     for key in removeList:
